@@ -1,0 +1,63 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	    <package name="default" extends="struts-default">
+	<action name="login" class="vaannila.loginAction" >
+  <result name="success" type="dispatcher">/Success.jsp</result>
+   <result name="error" type="redirect">/error.jsp</result>
+  <result name="input" type="dispatcher">/Login.jsp</result>
+
+</action>
+<action name="raj" class="vaannila.rajAction" >
+   <result name="success" type="dispatcher">/rajashree.jsp</result>
+</action>
+<action name="bplan" class="vaannila.bplanAction" >
+   <result name="success" type="dispatcher">/billingplan.jsp</result>
+</action>
+<action name="splan" class="vaannila.splanAction" >
+   <result name="success" type="dispatcher">/index.jsp</result>
+</action>
+<action name="bill" class="vaannila.billAction" >
+   <result name="success" type="dispatcher">/bills.jsp</result>
+</action>	 
+<action name="info" class="vaannila.infoAction" >
+   <result name="success" type="dispatcher">/index1.jsp</result>
+</action>	
+<action name="Bplan" class="vaannila.Bplan" >
+   <result name="success" type="dispatcher">/Success.jsp</result>
+</action> 	 	 
+<action name="logout" class="vaannila.logoutAction" >
+   <result name="success" type="redirect">/loginCheck.jsp</result>
+</action>
+<action name="*service" method="{1}" class="vaannila.serviceAction">
+            <result name="populate">/serviceplan.jsp</result>
+            
+            <result name="success">/Success.jsp</result>
+        </action>  
+<action name="*serviceselect" method="{1}" class="vaannila.serviceselectAction">
+            <result name="populate">/selectedservices.jsp</result>
+            
+            <result name="success">/Success.jsp</result>
+        </action>              
+<action name="Services" class="vaannila.Services" >
+   <result name="success" type="redirect">/servicedescription.jsp</result>
+</action>
+<action name="Register" class="vaannila.Register" >
+   <result name="success" type="redirect">/register1.jsp</result>
+</action>
+<action name="register12" class="vaannila.register12" >
+   <result name="success" type="redirect">/index.html</result>
+</action>
+
+<action name="Login1" class="vaannila.Login1" >
+   <result name="success" type="redirect">/Login.jsp</result>
+</action>
+	 	 
+    </package>
+</struts>
+
+
+
+
